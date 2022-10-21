@@ -1,0 +1,52 @@
+{
+  "template-component": {
+    "prefix": ["cp"],
+    "description": "Nextjs React 컴포넌트 스니펫",
+    "body": [
+      "import React from 'react'",
+      "",
+      "interface Props {}",
+      "",
+      "export const ${1:${TM_FILENAME_BASE}}: React.FC<Props> = () => {",
+      "\treturn <></>",
+      "}"
+    ]
+  },
+  "template-component-test": {
+    "prefix": ["cp-test"],
+    "description": "Nextjs React 컴포넌트 테스트파일 스니펫",
+    "body": [
+      "import { render, screen } from '@testing-library/react';",
+      "import userEvent from '@testing-library/user-event';",
+      "import '@testing-library/jest-dom';",
+      "",
+      "import ${1:${TM_FILENAME_BASE}} from '${2: ./ComponentPath}'",
+      "",
+      "it('${TM_FILENAME_BASE}', () => {",
+      "\trender(<${1:${TM_FILENAME_BASE}} />);",
+      "",
+      "\tscreen.getByText('')",
+      "})"
+    ]
+  },
+  "template-component-storybook": {
+    "prefix": ["cp-sb"],
+    "description": "Nextjs React 컴포넌트 스토리북 스니펫",
+    "body": [
+      "import React from 'react';",
+      "import { ComponentStory, ComponentMeta } from '@storybook/react';",
+      "",
+      "import {${1:${TM_FILENAME_BASE}}} from './${1:${TM_FILENAME_BASE}}'",
+      "",
+      "export default {",
+      "\ttitle: '${2: Category}/${1:${TM_FILENAME_BASE}}'",
+      "\tcomponent: ${1:${TM_FILENAME_BASE}}",
+      "} as ComponentMeta<typeof ${1:${TM_FILENAME_BASE}}>",
+      "",
+      "const Template: ComponentStory<typeof ${1:${TM_FILENAME_BASE}}> = (args) => <${1:${TM_FILENAME_BASE}} {...args} />",
+      "",
+      "export const ${3:Parameter} = Template.bind({})",
+      "${3:Parameter}.args = {}"
+    ]
+  }
+}

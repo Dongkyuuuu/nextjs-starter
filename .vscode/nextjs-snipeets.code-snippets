@@ -1,0 +1,27 @@
+{
+  "template-component": {
+    "prefix": ["nextPage"],
+    "description": "Nextjs Page 스니펫",
+    "body": [
+      "import type {",
+      "GetServerSidePropsContext,",
+      "InferGetServerSidePropsType,",
+      "NextPage",
+      "} from 'next';",
+      "",
+      "const ${1:${TM_FILENAME_BASE}}Page: NextPage = (",
+      "\tProps: InferGetServerSidePropsType<typeof getServerSideProps>",
+      ") => {",
+      "\t return <></>",
+      "};",
+      "",
+      "export async function getServerSideProps(ctx: GetServerSidePropsContext) {",
+      "\treturn {",
+      "\t\tprops: {},",
+      "\t};",
+      "}",
+      "",
+      "export default ${1:${TM_FILENAME_BASE}}Page"
+    ]
+  }
+}
