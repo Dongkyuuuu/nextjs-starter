@@ -53,6 +53,20 @@ import example from "@/components/TestModules";
 
 테스트 파일은 테스트 할 파일과 같은 위치에서 `*.spec.{ts|tsx}` 형식으로 생성하면 됩니다. `yarn test`를 통해 테스트 가능 합니다.
 
+## Commitlint
+
+정확한 히스토리 관리를 위해 commitlint가 적용되어 있습니다. 작성 방법은 아래와 같습니다.
+
+```
+<type>[optional scope]: <description>
+
+[optional body]
+
+[optional footer(s)]
+```
+
+자세한 내용은 [commitlint 문서](https://github.com/conventional-changelog/commitlint/#what-is-commitlint)에서 확인 가능합니다.
+
 ## Code Snippets (VSCode)
 
 템플릿 예제로 제공하는 코드들을 스니펫으로 쉽게 불러 올 수 있게 제공 하고 있습니다. 제공하는 스니펫은 아래와 같습니다.
