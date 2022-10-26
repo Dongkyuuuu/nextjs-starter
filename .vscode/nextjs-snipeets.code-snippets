@@ -3,6 +3,7 @@
     "prefix": ["nextPage"],
     "description": "Nextjs Page 스니펫",
     "body": [
+      "import React from 'react'",
       "import type {",
       "GetServerSidePropsContext,",
       "InferGetServerSidePropsType,",
